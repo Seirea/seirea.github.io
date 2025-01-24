@@ -1,11 +1,25 @@
 ---
+import StyledButton from '../components/StyledButton.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<main class="p-4 space-y-4 font-display">
-		<h1 class="text-4xl">Seirea Collective</h1>
+	<main class="p-4 font-display min-h-screen space-y-8">
+		<h1 class="text-6xl font-semibold">
+			<span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-red-600">Seirea</span>
+			Collective</h1>
 
-		<p>The Seirea Collective is a student-led development organization.</p>
+		<ul class="flex flex-col gap-2 text-xl">
+			<p>The Seirea Collective is a student-led development organization.</p>
+			<!-- <p>El Seirea Collective es una organización de estudiantes desarrolladores.</p> -->
+		</ul>
+
+		<div class="space-y-2">
+			<h2 class="text-3xl font-medium">Projects</h2>
+			<ul class="flex flex-row gap-4">
+				<StyledButton href="https://app.seirea.org">Seirea</StyledButton>
+				<StyledButton href="https://github.com/Seirea/zilk-web">Zilk</StyledButton>
+			</ul>
+		</div>
 	</main>
 </Layout>

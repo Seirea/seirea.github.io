@@ -1,7 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
-import background from "../assets/background.svg";
-
+import Footer from "../components/Footer.astro";
 import "@fontsource-variable/inter";
 ---
 
@@ -14,7 +12,8 @@ import "@fontsource-variable/inter";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="bg-gradient-to-tr from-slate-200 to-blue-300">
 		<slot />
+		<Footer></Footer>
 	</body>
 </html>
