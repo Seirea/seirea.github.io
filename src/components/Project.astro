@@ -1,0 +1,19 @@
+---
+
+const {href, repo_href, name} = Astro.props;
+---
+
+<li class="rounded-md outline outline-0 bg-gradient-to-tr from-blue-500 to-purple-700 text-white p-4 hover:outline-white hover:outline-2 transition-all">
+    <div class="flex flex-row justify-between">
+        <div class="flex flex-col gap-2">
+            <a href={href} class="text-2xl hover:underline hover:font-bold transition-all">{name}</a>
+
+            <slot />
+        </div>
+        <div>
+            <a href={repo_href} class="hover:underline hover:font-bold transition-all">Repository</a>
+        </div>
+    </div>
+</li>
+<!-- <a href={href} >
+</a> -->

@@ -1,4 +1,5 @@
 ---
+import Project from '../components/Project.astro';
 import StyledButton from '../components/StyledButton.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -18,9 +19,9 @@ import Layout from '../layouts/Layout.astro';
 
 		<div class="space-y-2">
 			<h2 class="text-3xl font-medium">Projects</h2>
-			<ul class="flex flex-row gap-4">
-				<StyledButton href="https://app.seirea.org">Seirea</StyledButton>
-				<StyledButton href="https://seirea.org/biomechanics">BioMechanics: The Puzzles of Restoration</StyledButton>
+			<ul class="flex flex-col gap-4">
+				<Project href="https://app.seirea.org" repo_href="https://github.com/Seirea/seirea-web" name="Seirea">An open source grade viewer application.</Project>
+				<Project href="https://seirea.org/biomechanics" repo_href="https://github.com/stanleymw/biomechanics" name="BioMechanics: The Puzzles of Restoration">Puzzle game submission for the U.S. National Science Foundation Game Maker Awards Competition.</Project>
 			</ul>
 		</div>
 	</main>
