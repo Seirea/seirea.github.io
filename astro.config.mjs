@@ -7,4 +7,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://seirea.org",
   integrations: [tailwind()],
+  redirects: {
+    '/biomechanics': 'https://biomechanics.seirea.org/'
+  }
 });
