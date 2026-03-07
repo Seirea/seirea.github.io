@@ -2,30 +2,31 @@
 import Project from "../components/Project.astro";
 import StyledButton from "../components/StyledButton.astro";
 import Layout from "../layouts/Layout.astro";
+
+import Logo from "../assets/spectris.svg";
 ---
 
 <Layout>
-  <main class="p-16 md:p-32 font-display min-h-screen space-y-8">
-    <h1 class="text-6xl font-semibold">
-      <span
-        class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-red-600"
-        >Seirea</span
-      >
-      Collective
-    </h1>
-
-    <ul class="flex flex-col gap-2 text-xl">
-      <p>The Seirea Collective is an organization of student developers.</p>
-      <p>
-        El colectivo Seirea es una organización de estudiantes desarrolladores.
-      </p>
-      <p>Le Seirea Collectif est un organisation des élèves développeurs.</p>
-      <p>Сейриа е колективна организация на ученик-програмисти.</p>
-    </ul>
+  <main class="p-16 md:p-32 font-display min-h-screen space-y-8 text-white">
+    <div class="flex flex-row items-center">
+      <Logo width=64rem/>
+      <h1 class="text-7xl font-semibold">
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-400 to-red-400"
+          >Spectris</span
+        >
+        Collective
+      </h1>
+    </div>
+    
+    <div class="space-y-2">
+      <h2 class="text-4xl font-medium">About</h2>
+      <p class="text-2xl">Spectris is a student software development and research organization.</p>
+    </div>
 
     <div class="space-y-2">
-      <h2 class="text-3xl font-medium">Projects</h2>
-      <ul class="flex flex-col gap-4">
+      <h2 class="text-4xl font-medium">Projects</h2>
+      <ul class="flex flex-row gap-4">
         <Project
           href="https://app.seirea.org"
           repo_href="https://github.com/Seirea/seirea-web"
