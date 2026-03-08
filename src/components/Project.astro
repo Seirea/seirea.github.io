@@ -1,18 +1,26 @@
 ---
 
 const {href, repo_href, name} = Astro.props;
+
+import GitHub from "../assets/github.svg";
+import Codeberg from "../assets/codeberg.svg";
+
+let Logo = (new URL(repo_href)).host == "codeberg.org" ? Codeberg : GitHub;
 ---
 
-<li class="rounded-md outline outline-0 bg-zinc-800 text-white p-4 hover:outline-white hover:outline-2 transition-all">
-    <div class="flex flex-row justify-between">
-        <div class="flex flex-col gap-2">
-            <a href={href} class="text-2xl hover:underline hover:font-bold transition-all">{name}</a>
+<li class="rounded-md outline outline-0 bg-zinc-800 text-white p-4 hover:outline-white hover:outline-2 transition-all flex flex-col gap-2">
+    <div class="flex flex-row justify-between items-center gap-4">
+        <a href={href} class="text-2xl hover:underline transition-all">
+            {name}
+        </a>
 
-            <slot />
-        </div>
-        <div>
-            <a href={repo_href} class="hover:underline hover:font-bold transition-all">Repository</a>
-        </div>
+        <a href={repo_href} aria-label="Repository Link">
+            <Logo width=1.5em height=1.5em class="hover:opacity-50 transition-all"  />
+        </a>
+    </div>
+
+    <div class="max-w-lg text-lg">
+        <slot />
     </div>
 </li>
 <!-- <a href={href} >
