@@ -10,12 +10,11 @@ import Logo from "../assets/spectris.svg";
 ---
 
 <Layout>
-  <main class="p-16 md:p-32 font-display min-h-screen space-y-8 text-white">
-
-    <div class="flex flex-col sm:flex-row justify-between">
-      <div class="flex flex-row items-center">
-        <Logo width=16rem height=16rem />
-        <h1 class="text-7xl font-semibold">
+  <main class="p-8 md:p-32 font-display space-y-8 text-white">
+    <div class="flex flex-row flex-wrap justify-between text-5xl md:text-7xl  lg:text-8xl gap-8">
+      <div class="flex flex-row justify-start items-center">
+        <Logo class="max-h-[3em] max-w-[2em] md:max-w-[3em]"/>
+        <h1 class="font-semibold">
           <style>@keyframes p{to{background-position:200% center}}</style>
 
           <span
@@ -28,10 +27,10 @@ import Logo from "../assets/spectris.svg";
 
       <div class="flex flex-row gap-8">
         <a href="https://github.com/seirea" aria-label="Organization GitHub Link">
-            <GitHub width=3.5em height=3.5em class="hover:opacity-50 transition-all" />
+            <GitHub width=.8em height=.8em class="hover:opacity-50 transition-all" />
         </a>
         <a href="https://codeberg.org/spectris" aria-label="Organization GitHub Link">
-            <Codeberg width=3.5em height=3.5em class="hover:opacity-50 transition-all" />
+            <Codeberg width=.8em height=.8em class="hover:opacity-50 transition-all" />
         </a>
       </div>
     </div>
@@ -43,7 +42,7 @@ import Logo from "../assets/spectris.svg";
 
     <div class="space-y-2">
       <h2 class="text-4xl font-medium">Projects</h2>
-      <ul class="flex flex-row gap-4">
+      <ul class="flex flex-row flex-wrap gap-4">
         <Project
           href="https://app.seirea.org"
           repo_href="https://github.com/Seirea/seirea-web"

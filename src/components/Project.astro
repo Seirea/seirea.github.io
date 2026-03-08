@@ -8,7 +8,7 @@ import Codeberg from "../assets/codeberg.svg";
 let Logo = (new URL(repo_href)).host == "codeberg.org" ? Codeberg : GitHub;
 ---
 
-<li class="rounded-md outline outline-0 bg-zinc-800 text-white p-4 hover:outline-white hover:outline-2 transition-all flex flex-col gap-2">
+<li class="rounded-md outline outline-0 bg-zinc-800 text-white p-4 hover:outline-white hover:outline-2 transition-all flex flex-col gap-2 grow">
     <div class="flex flex-row justify-between items-center gap-4">
         <a href={href} class="text-2xl hover:underline transition-all">
             {name}
